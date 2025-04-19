@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginUI">
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login to Account"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:translationY="175dp" />
+
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="389dp"
+            android:layout_height="wrap_content"
+            android:text="Enter Your Username"
+            android:textSize="20sp"
+            android:translationY="195dp"
+            android:textStyle="bold"
+           android:gravity="left"/>
+
+        <EditText
+            android:id="@+id/loginSCUserName"
+            android:layout_width="390dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="username@gmail.com"
+            android:inputType="textEmailAddress"
+            android:textSize="20sp"
+            android:translationY="200dp"
+            android:gravity="left" />
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="392dp"
+            android:layout_height="wrap_content"
+            android:text="Enter Your Password"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="left"
+            android:translationY="220dp" />
+
+        <EditText
+            android:id="@+id/loginSCPassword"
+            android:layout_width="392dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="************"
+            android:inputType="textPassword"
+            android:textSize="20sp"
+            android:translationY="245dp"
+            android:gravity="left"
+            />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Need to Register "
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#3346B6"
+            android:translationY="290dp"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/loginSCsignup"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/black"
+            android:text="Sign Up"
+            android:fontFamily="serif"
+            android:translationY="320dp"
+           android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/loginSCsignin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:text="Sign In"
+            android:fontFamily="serif"
+            android:translationY="340dp"/>
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FINANCE TRACKER"
+            android:translationY="-220dp"
+            android:fontFamily="serif"
+            android:textColor="#F4511E"
+            android:textSize="28dp"
+            android:gravity="center"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
