@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register_UI">
+
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="921dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FINANCE TRACKER"
+            android:translationY="160dp"
+            android:fontFamily="serif"
+            android:textColor="#F4511E"
+            android:textSize="28dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create an Account"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:translationX="120sp"
+            android:textStyle="bold"
+            android:translationY="175dp" />
+
+        <TextView
+            android:id="@+id/registerfirstnameview"
+            android:layout_width="390dp"
+            android:layout_height="wrap_content"
+            android:text="First Name "
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:translationX="12dp"
+            android:translationY="190dp" />
+
+        <EditText
+            android:id="@+id/registerfname"
+            android:layout_width="390dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:translationX="12dp"
+            android:translationY="200dp" />
+
+        <TextView
+            android:id="@+id/registerlastnameview"
+            android:layout_width="388dp"
+            android:layout_height="wrap_content"
+            android:text="Last Name"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:translationX="12dp"
+            android:translationY="220dp" />
+
+        <EditText
+            android:id="@+id/registerlname"
+            android:layout_width="388dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:translationX="12dp"
+            android:translationY="225dp" />
+
+        <TextView
+            android:id="@+id/registeremailview"
+            android:layout_width="388dp"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:translationX="12dp"
+            android:translationY="235dp" />
+
+        <EditText
+            android:id="@+id/registeremail"
+            android:layout_width="384dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:translationX="12dp"
+            android:translationY="250dp" />
+
+        <TextView
+            android:id="@+id/registerpwview"
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:translationX="12dp"
+            android:translationY="270dp" />
+
+        <EditText
+            android:id="@+id/registerpassword"
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:translationX="12dp"
+            android:translationY="280dp" />
+
+
+        <Button
+            android:id="@+id/registersubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit &amp; Login"
+            android:backgroundTint="@color/black"
+            android:translationY="370dp"/>
+
+        <CheckBox
+            android:id="@+id/registercheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="I Agree with terms and conditions."
+            android:translationY="255dp"/>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

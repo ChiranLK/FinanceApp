@@ -1,6 +1,9 @@
 package com.example.financeapp
 
+import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +19,10 @@ class loading_ui2 : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        Handler(Looper.getMainLooper()).postDelayed({
+            val intent = Intent(this, LoginUI::class.java)
+            startActivity(intent)
+            finish() // Finish the current activity so it doesn't stay in the back stack
+        }, 5000)
     }
 }
