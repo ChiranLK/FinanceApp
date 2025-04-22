@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, LoadingUI1::class.java)
+            val intent = Intent(this, loading_sc1::class.java)
             startActivity(intent)
             finish() // Finish the current activity so it doesn't stay in the back stack
         }, 5000)

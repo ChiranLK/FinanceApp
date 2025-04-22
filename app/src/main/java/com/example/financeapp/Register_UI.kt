@@ -66,7 +66,7 @@ class Register_UI : AppCompatActivity() {
 
                 Toast.makeText(this, "Registration Successful", Toast.LENGTH_SHORT).show()
 
-                val intent = Intent(this, Home_UI::class.java)
+                val intent = Intent(this, HomeFragment::class.java)
                 startActivity(intent)
                 finish()
             } else {

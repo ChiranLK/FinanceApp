@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,25 +15,31 @@
         android:theme="@style/Theme.FinanceApp"
         tools:targetApi="31">
         <activity
-            android:name=".User_P_UI"
+            android:name=".RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".User_Profile_UI"
+            android:name=".SummaryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BudgetActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BudgetViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddTransactionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".loading_sc1"
             android:exported="false" />
         <activity
             android:name=".Register_UI"
             android:exported="false" />
         <activity
-            android:name=".Home_UI"
-            android:exported="false" />
-        <activity
-            android:name=".LoginUI"
+            android:name=".LoginActivity"
             android:exported="false" />
         <activity
             android:name=".loading_ui2"
-            android:exported="false" />
-        <activity
-            android:name=".LoadingUI1"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

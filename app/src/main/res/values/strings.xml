@@ -1,3 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">FinanceApp</string>
+    <string name="app_name">Finance Tracker</string>
+
+    <!-- Navigation -->
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_transactions">Transactions</string>
+    <string name="title_budget">Budget</string>
+
+    <!-- Dashboard -->
+    <string name="balance">Balance</string>
+    <string name="monthly_budget">Monthly Budget</string>
+    <string name="recent_transactions">Recent Transactions</string>
+    <string name="budget_status">%1$s of %2$s</string>
+
+    <!-- Transactions -->
+    <string name="add_transaction">Add Transaction</string>
+    <string name="edit_transaction">Edit Transaction</string>
+    <string name="delete_transaction">Delete Transaction</string>
+    <string name="title">Title</string>
+    <string name="amount">Amount</string>
+    <string name="category">Category</string>
+    <string name="date">Date</string>
+    <string name="type">Type</string>
+    <string name="income">Income</string>
+    <string name="expense">Expense</string>
+
+    <!-- Budget -->
+    <string name="set_budget">Set Monthly Budget</string>
+    <string name="current_budget">Current Budget</string>
+    <string name="update_budget">Update Budget</string>
+    <string name="budget_warning">You are approaching your budget limit!</string>
+    <string name="budget_exceeded">You have exceeded your budget!</string>
+
+    <!-- Categories -->
+    <string name="category_food">Food</string>
+    <string name="category_transport">Transport</string>
+    <string name="category_bills">Bills</string>
+    <string name="category_entertainment">Entertainment</string>
+    <string name="category_shopping">Shopping</string>
+    <string name="category_other">Other</string>
+
+    <!-- Actions -->
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="confirm">Confirm</string>
 </resources>
