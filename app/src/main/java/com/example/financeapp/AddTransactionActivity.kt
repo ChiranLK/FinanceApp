@@ -8,7 +8,7 @@ import android.widget.*
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import java.util.*
+
 
 class AddTransactionActivity : AppCompatActivity() {
     private lateinit var etAmount: EditText
@@ -141,6 +141,14 @@ class AddTransactionActivity : AppCompatActivity() {
 
                 if (success) {
                     // Check if we have notification permission before showing notification
+                    if(type == "income"){
+                        val currentBudget = BudgetManager.getBudget(user.accountNumber)
+                        if(currentBudget != null){
+                            val newBudgetAmount = currentBudget.amount + amount
+                            BudgetManager.setBudget(user.accountNumber, newBudgetAmount)
+
+                        }
+                    }
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
                         if (ContextCompat.checkSelfPermission(
                                 this,

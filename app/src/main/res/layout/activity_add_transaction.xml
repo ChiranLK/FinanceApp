@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddTransactionActivity">
+    tools:context=".AddTransactionActivity"
+    android:background="@drawable/backgroundimg">
 
 
     <!-- Back Button -->
@@ -16,18 +17,15 @@
 
     <ImageButton
         android:id="@+id/btnBack"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="40dp"
-        android:background="@android:color/transparent"
-        android:src="@android:drawable/ic_media_previous"
+        android:translationY="55dp"
+        android:translationX="25dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
         android:contentDescription="Go back"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tint="@android:color/black" />
+        android:padding="8dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/backword" /> />
 
     <ImageView
         android:id="@+id/headerImage"
@@ -53,6 +51,7 @@
         android:textColor="#FF000000"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:translationY="-12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/headerImage" />
@@ -70,10 +69,11 @@
         app:layout_constraintTop_toBottomOf="@id/tvTitle"/>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="410dp"
+        android:layout_height="408dp"
         android:orientation="vertical"
         android:padding="16dp"
+        android:background="@drawable/white_box"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -85,9 +85,10 @@
         <EditText
             android:id="@+id/etAmount"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_button"
+            android:layout_height="66dp"
+            android:backgroundTint="#C1BFBF"
             android:hint="Enter Amount"
+            android:background="@drawable/rounded_button"
             android:inputType="numberDecimal"
             android:padding="12dp"
             android:textColor="#333333"
@@ -97,34 +98,38 @@
         <EditText
             android:id="@+id/etDescription"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_marginTop="16dp"
-            android:background="@drawable/rounded_button"
+            android:backgroundTint="#C1BFBF"
             android:hint="Description"
+            android:background="@drawable/rounded_button"
             android:inputType="text"
             android:padding="12dp"
-            android:textColor="#333333"
+            android:textColor="#000000"
             android:textSize="16sp" />
 
         <!-- Category Spinner -->
         <Spinner
             android:id="@+id/spinnerCategory"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="61dp"
             android:layout_marginTop="16dp"
+            android:backgroundTint="#C1BFBF"
             android:background="@drawable/rounded_button"
             android:padding="12dp" />
 
         <!-- Type Spinner -->
+
+        <!-- Save Button -->
         <Spinner
             android:id="@+id/spinnerType"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="65dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/rounded_button"
+            android:backgroundTint="#C1BFBF"
             android:padding="12dp" />
 
-        <!-- Save Button -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

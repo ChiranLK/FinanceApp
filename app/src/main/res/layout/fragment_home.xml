@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    tools:context=".HomeFragment"
+    android:background="@drawable/backgroundimg">
 
 
     <LinearLayout
@@ -36,6 +37,8 @@
             android:fontFamily="serif"
             android:gravity="center"
             android:text="Track Your Finance"
+            android:background="#E2D4D4"
+            android:textColor="@color/button_color"
             android:textSize="28dp"
             android:translationY="90dp" />
 
@@ -47,13 +50,14 @@
             android:text="Track Smart. Live Better."
             android:textSize="24sp"
             android:textStyle="italic"
+            android:textColor="@color/black"
             android:translationY="110dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:translationY="125dp">
+            android:translationY="145dp">
 
             <!-- Buttons -->
             <Button
@@ -71,7 +75,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
-                android:backgroundTint="@drawable/rounded_button"
+                android:backgroundTint="@color/black"
                 android:text="Add Transaction"
                 android:textAllCaps="false"
                 android:textColor="@android:color/white" />

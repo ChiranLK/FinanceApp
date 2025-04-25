@@ -2,6 +2,7 @@ package com.example.financeapp
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -16,6 +17,7 @@ class SummaryActivity : AppCompatActivity() {
     private lateinit var tvBalance: TextView
     private lateinit var recyclerView: RecyclerView
     private lateinit var transactionAdapter: TransactionAdapter
+    private lateinit var btnBack: ImageButton
     private val TAG = "SummaryActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +34,12 @@ class SummaryActivity : AppCompatActivity() {
             tvTotalIncome = findViewById(R.id.tvTotalIncome)
             tvBalance = findViewById(R.id.tvBalance)
             recyclerView = findViewById(R.id.recyclerView)
+            btnBack = findViewById(R.id.btnBack)
+
+            // Set up back button
+            btnBack.setOnClickListener {
+                finish()
+            }
 
             // Set up RecyclerView
             recyclerView.layoutManager = LinearLayoutManager(this)

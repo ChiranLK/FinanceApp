@@ -6,8 +6,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.financeapp.databinding.ActivityProfileBinding
-import com.example.personalfinancetracker.LoginActivity
-
+import com.example.financeapp.LoginActivity
 class ProfileActivity : AppCompatActivity() {
 
     private val TAG = "ProfileActivity"

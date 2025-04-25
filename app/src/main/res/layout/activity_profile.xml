@@ -2,16 +2,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@drawable/backgroundimg">
 
     <!-- Back Button -->
 
     <!-- Account Details Card -->
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:background="@android:color/transparent"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#000000" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="544dp"
         android:layout_marginTop="16dp"
         android:background="#FFFFFF">
 
@@ -42,7 +55,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="NIC/Passport"
+                    android:text="Email"
                     android:textColor="#666666"
                     android:textSize="14sp" />
 
@@ -67,7 +80,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Account Number"
+                    android:text="Phone Number"
                     android:textColor="#666666"
                     android:textSize="14sp" />
 
@@ -92,7 +105,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Phone Number"
+                    android:text="Full Name"
                     android:textColor="#666666"
                     android:textSize="14sp" />
 
@@ -110,11 +123,12 @@
             <Button
                 android:id="@+id/btnLogout"
                 android:layout_width="match_parent"
+                android:backgroundTint="@color/black"
+                android:textColor="@android:color/white"
+                android:layout_margin="16dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/rounded_button"
                 android:text="Logout"
-                android:textAllCaps="false"
-                android:textColor="#FFFFFF" />
+                android:textAllCaps="false" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

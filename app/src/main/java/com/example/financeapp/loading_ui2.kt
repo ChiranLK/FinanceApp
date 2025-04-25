@@ -8,7 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.personalfinancetracker.LoginActivity
+import com.example.financeapp.LoginActivity
 
 class loading_ui2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

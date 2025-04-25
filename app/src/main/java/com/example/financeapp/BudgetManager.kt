@@ -29,7 +29,7 @@ class BudgetManager private constructor(context: Context) {
         }
     }
 
-    private fun setBudget(accountNumber: String, amount: Double): Boolean {
+    private fun setBudget(accountNumber: String, amount: Double): Boolean { //budget
         return try {
             prefs.edit().putFloat(getBudgetKey(accountNumber), amount.toFloat()).apply()
             true

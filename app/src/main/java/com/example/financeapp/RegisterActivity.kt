@@ -2,9 +2,10 @@ package com.example.financeapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.personalfinancetracker.LoginActivity
+import com.example.financeapp.LoginActivity
 import com.google.android.material.textfield.TextInputEditText
 
 class RegisterActivity : AppCompatActivity() {
@@ -27,12 +28,19 @@ class RegisterActivity : AppCompatActivity() {
         etConfirmPassword = findViewById(R.id.etConfirmPassword)
         etPhone = findViewById(R.id.etPhone)
 
+
+        findViewById<android.widget.TextView>(R.id.tvAlreadyRegistered).setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
+
         findViewById<android.widget.Button>(R.id.btnRegister).setOnClickListener {
             val nicPassport = etNicPassport.text.toString().trim()
             val accountNumber = etAccountNumber.text.toString().trim()
             val password = etPassword.text.toString().trim()
             val confirmPassword = etConfirmPassword.text.toString().trim()
             val phone = etPhone.text.toString().trim()
+
 
             if (nicPassport.isEmpty() || accountNumber.isEmpty() || password.isEmpty() ||
                 confirmPassword.isEmpty() || phone.isEmpty()) {
@@ -45,9 +53,23 @@ class RegisterActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+            if (!isValidPassword(password)) {
+                Toast.makeText(this, "Password must be at least 6 characters", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            if (!isValidPhone(phone)) {
+                Toast.makeText(this, "Please enter a valid phone number", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            if (!isValidNicPassport(nicPassport)) {
+                Toast.makeText(this, "Please enter a valid Email Address", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
             if (UserManager.registerUser(accountNumber, nicPassport, password, phone)) {
                 Toast.makeText(this, "Registration successful! Please login.", Toast.LENGTH_SHORT).show()
-                // Navigate to LoginActivity
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
                 finish()
@@ -56,4 +78,17 @@ class RegisterActivity : AppCompatActivity() {
             }
         }
     }
+
+    private fun isValidPhone(phone: String): Boolean {
+        return Patterns.PHONE.matcher(phone).matches() && phone.length == 10
+    }
+
+    private fun isValidPassword(password: String): Boolean {
+        return password.length >= 6
+    }
+
+    private fun isValidNicPassport(nicPassport: String): Boolean {
+        return "@" in nicPassport
+    }
+
 }

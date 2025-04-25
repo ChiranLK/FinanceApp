@@ -1,13 +1,9 @@
-package com.example.personalfinancetracker
+package com.example.financeapp
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.financeapp.HomeFragment
-import com.example.financeapp.R
-import com.example.financeapp.RegisterActivity
-import com.example.financeapp.UserManager
 import com.google.android.material.textfield.TextInputEditText
 
 class LoginActivity : AppCompatActivity() {
@@ -23,7 +19,7 @@ class LoginActivity : AppCompatActivity() {
 
         // Check if user is already logged in
         if (UserManager.isLoggedIn()) {
-            startActivity(Intent(this, HomeFragment::class.java))
+            startActivity(Intent(this, Dashboard::class.java))
             finish()
             return
         }
@@ -42,7 +38,7 @@ class LoginActivity : AppCompatActivity() {
 
             if (UserManager.loginUser(nicPassport, password)) {
                 // Start MainActivity and clear the back stack
-                val intent = Intent(this, HomeFragment::class.java)
+                val intent = Intent(this, Dashboard::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(intent)
                 finish()

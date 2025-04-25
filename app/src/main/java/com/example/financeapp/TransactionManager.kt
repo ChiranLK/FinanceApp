@@ -54,7 +54,7 @@ class TransactionManager private constructor(context: Context) {
 
     private fun addTransaction(accountNumber: String, amount: Double, description: String, category: String, type: String): Boolean {
         return try {
-            Log.d(TAG, "Adding transaction: $description, $amount, $category, $type")
+            Log.d(TAG, "Adding transaction: $description, $amount, $category, $type")// ////input
             val transactions = getTransactions(accountNumber).toMutableList()
             val newTransaction = Transaction(
                 id = System.currentTimeMillis(),
@@ -75,7 +75,7 @@ class TransactionManager private constructor(context: Context) {
         }
     }
 
-    private fun updateTransaction(id: Long, amount: Double, description: String, category: String, type: String): Boolean {
+    private fun updateTransaction(id: Long, amount: Double, description: String, category: String, type: String): Boolean { //update
         return try {
             Log.d(TAG, "Updating transaction: $id")
             val transactions = loadTransactions().toMutableList()
@@ -102,7 +102,7 @@ class TransactionManager private constructor(context: Context) {
         }
     }
 
-    private fun deleteTransaction(id: Long): Boolean {
+    private fun deleteTransaction(id: Long): Boolean { // delete transaction
         return try {
             Log.d(TAG, "Deleting transaction: $id")
             val transactions = loadTransactions().toMutableList()
@@ -123,7 +123,7 @@ class TransactionManager private constructor(context: Context) {
         }
     }
 
-    fun getTransactions(accountNumber: String): List<Transaction> {
+    fun getTransactions(accountNumber: String): List<Transaction> { // read
         return try {
             loadTransactions().filter { it.accountNumber == accountNumber }
         } catch (e: Exception) {

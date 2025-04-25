@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import com.example.personalfinancetracker.LoginActivity
+import com.example.financeapp.LoginActivity
 
 class ProfileFragment : Fragment() {
     private lateinit var tvNicPassport: TextView
@@ -30,8 +30,6 @@ class ProfileFragment : Fragment() {
         tvNicPassport = view.findViewById(R.id.tvUsername)
         tvPhone = view.findViewById(R.id.tvEmail)
         tvAccountNumber = view.findViewById(R.id.tvAccountNumber)
-        btnEditProfile = view.findViewById(R.id.btnEditProfile)
-        btnChangePassword = view.findViewById(R.id.btnChangePassword)
         btnLogout = view.findViewById(R.id.btnLogout)
 
         // Load user data
@@ -46,9 +44,9 @@ class ProfileFragment : Fragment() {
     private fun loadUserData() {
         val user = UserManager.getCurrentUser()
         if (user != null) {
-            tvNicPassport.text = "NIC/Passport: ${user.nicPassport}"
-            tvPhone.text = "Phone: ${user.phone}"
-            tvAccountNumber.text = "Account: ${user.accountNumber}"
+            tvNicPassport.text = " ${user.nicPassport}"
+            tvPhone.text = "${user.phone}"
+            tvAccountNumber.text = "${user.accountNumber}"
         } else {
             // If no user is logged in, redirect to login
             startActivity(Intent(requireContext(), LoginActivity::class.java))
